@@ -8,6 +8,8 @@ from jinja2 import TemplateNotFound
 # import flask_cors modules
 # CORS - enable Cross Origin Resource Sharing
 from flask_cors import CORS
+import random
+import string
 
 # Connect to MongoDB
 from credentials import mongodb_parameters
@@ -32,9 +34,11 @@ def html_lookup(page):
         return render_template('{}.html'.format(page))
     except TemplateNotFound:
         abort(404)
-#@app.route('/')
-#def index():
-#   return render_template('index.html')
+
+      #
+@app.route('/')
+def index():
+  return render_template('index.html')
 @app.route('/welcome')
 def index_welcome():
    return render_template('welcome.html')

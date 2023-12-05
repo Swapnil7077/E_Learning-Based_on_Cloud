@@ -9,7 +9,7 @@
 def mongodb_parameters():
 
     params = {
-        'dblink': 'mongodb://test:test123@ds213896.mlab.com:13896/e-learning-on-cloud',
+        'dblink': 'mongodb://localhost:27017/',
         'database_name': 'e-learning-on-cloud',
         'collection_name': 'User'
     }
